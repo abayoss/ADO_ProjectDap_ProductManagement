@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6A5FC04-0C79-4338-B354-8FACE550E180}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project_Dap</RootNamespace>
+    <AssemblyName>Project_Dap</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CLS_CUSTOMERS.cs" />
+    <Compile Include="BL\CLS_LOGIN.cs" />
+    <Compile Include="BL\CLS_ORDERS.cs" />
+    <Compile Include="BL\CLS_PRODUCTS.cs" />
+    <Compile Include="BL\DAL\DataAccessLayer.cs" />
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Admin\A1\A1_1_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Admin\A1\A1_1_Form.Designer.cs">
+      <DependentUpon>A1_1_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Admin\A1\A1_2_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Admin\A1\A1_2_Form.Designer.cs">
+      <DependentUpon>A1_2_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Admin\A3_cust\A3_add_cust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Admin\A3_cust\A3_add_cust.Designer.cs">
+      <DependentUpon>A3_add_cust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Admin\Principal\A1_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Admin\Principal\A1_form.Designer.cs">
+      <DependentUpon>A1_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Admin\A_2_Users\A2_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Admin\A_2_Users\A2_Form.Designer.cs">
+      <DependentUpon>A2_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Utilisateur\Excel\EXtoDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Utilisateur\Excel\EXtoDG.Designer.cs">
+      <DependentUpon>EXtoDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL_Utilisateur\UserPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL_Utilisateur\UserPrincipal.Designer.cs">
+      <DependentUpon>UserPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Admin\A1\A1_1_Form.resx">
+      <DependentUpon>A1_1_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Admin\A1\A1_2_Form.resx">
+      <DependentUpon>A1_2_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Admin\A3_cust\A3_add_cust.resx">
+      <DependentUpon>A3_add_cust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Admin\A_2_Users\A2_Form.resx">
+      <DependentUpon>A2_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Admin\Principal\A1_form.resx">
+      <DependentUpon>A1_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Utilisateur\Excel\EXtoDG.resx">
+      <DependentUpon>EXtoDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL_Utilisateur\UserPrincipal.resx">
+      <DependentUpon>UserPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Product_DBDataSet.xsc">
+      <DependentUpon>Product_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Product_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Product_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Product_DBDataSet.xss">
+      <DependentUpon>Product_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resourses\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
